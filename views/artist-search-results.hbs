@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Search Results</title>
+</head>
+
+<body>
+<h1>Artist Search Results</h1>
+  <ul>
+  {{#each artist}}
+    <li>
+      {{#if this.images.length}}
+        <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+      {{/if}}
+      <h2>{{this.name}}</h2>
+      <a href="/albums/{{this.id}}">View Albums</a>
+    </li>
+  {{/each}}
+</ul>
+   
+</body>
+
+</html>
